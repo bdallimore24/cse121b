@@ -60,6 +60,20 @@ function divideNumbers() {
 document.querySelector("#divideNumbers").addEventListener("click", divideNumbers);
 
 
+function getTotal(){
+    let subTotal = Number(document.querySelector("#subtotal").value);
+    let fullTotal;
+    if (document.getElementById("member").checked){
+        fullTotal = subTotal - (subTotal * .20);
+    } else { 
+        fullTotal = subTotal;
+    }
+    document.querySelector("#total").textContent = `$ ${fullTotal.toFixed(2)}`;
+}
+
+
+document.querySelector("#getTotal").addEventListener("click", getTotal);
+
 /* Decision Structure */
 
 let currentDate = new Date();
