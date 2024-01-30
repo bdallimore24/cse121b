@@ -43,6 +43,7 @@ function multiplyNumbers () {
     multiplyfactor2 = Number(document.querySelector("#factor2").value);
     document.querySelector("#product").value = multiply(multiplyfactor1, multiplyfactor2);
 }
+
 document.querySelector("#multiplyNumbers").addEventListener("click", multiplyNumbers);
 
 
@@ -57,6 +58,7 @@ function divideNumbers() {
     divideNumber2 = Number(document.querySelector("#divisor").value);
     document.querySelector("#quotient").value = divide(divideNumber1, divideNumber2);
 }
+
 document.querySelector("#divideNumbers").addEventListener("click", divideNumbers);
 
 
