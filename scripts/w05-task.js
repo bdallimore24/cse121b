@@ -36,26 +36,33 @@ const filterTemples = (temples) => {
     reset();
     const filter = document.getElementById("filtered").value;
     switch (filter) {
+        
         case "utah":
             const utah = templeList.filter((temples) => temples.location.includes("Utah"));
             displayTemples(utah);
             break;
+
         case "notutah":
             const notutah = templeList.filter((temples) => !temples.location.includes("Utah"));
             displayTemples(notutah);
             break;
+
         case "older":
             const older = templeList.filter((temples) => new Date(temples.dedicated) < new Date(1950, 0, 1));
             displayTemples(older);
             break;
+
         case "all":
             displayTemples(templeList);
             break;
+            
         default:
             console.log("Choose a filter");
     };
 };
+
 getTemples();
+
 document.querySelector("#filtered").addEventListener("change", () => {filterTemples(templeList)});
 
 console.log(templeList);
